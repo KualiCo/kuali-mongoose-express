@@ -1,7 +1,7 @@
 version: 2
 jobs:
   test:
-    working_directory: ~/kuali-logger
+    working_directory: ~/module_dir
     docker:
       - image: circleci/node:6
     steps:
@@ -89,7 +89,7 @@ jobs:
           path: coverage
           destination: coverage
   deploy:
-    working_directory: ~/kuali-logger
+    working_directory: ~/module_dir
     docker:
       - image: circleci/node:6
     steps:
