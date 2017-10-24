@@ -127,8 +127,10 @@ workflows:
   version: 2
   test_deploy:
     jobs:
-      - test
+      - test:
+          context: org-global
       - deploy:
+          context: org-global
           requires:
             - test
           filters:
